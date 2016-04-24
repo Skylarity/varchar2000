@@ -24,7 +24,7 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: "varchar2000",
-                        templateUrl: "template/varchar200.html"
+                        templateUrl: "app/templates/varchar2000.html"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
