@@ -3,5 +3,5 @@
 /vendor
 /node_modules
 /typings
-*.js.map
-*.js
+/app/*.js.map
+/app/*.js
