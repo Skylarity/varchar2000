@@ -1,3 +1,13 @@
+<div class="jumbotron">
+	<div class="container">
+		<h1>VARCHAR(2000)</h1>
+		<h2 id="counter" class="h1 pull-right"><small class="dark-text">2000 - {{currentCharsUsed}} = </small>{{counter}}</h2>
+	</div>
+</div>
 <div class="container">
-	<h1>varchar2000</h1>
+	<div class="row">
+		<div class="col-md-12">
+			<textarea id="varchar2000" name="varchar2000" (keydown)="reset();" (keyup)="countChars(text);" class="form-control" rows="13" maxlength="2000" placeholder="Let's get crazy!" #text></textarea>
+		</div>
+	</div>
 </div>

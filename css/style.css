@@ -1,0 +1,11 @@
+.jumbotron {
+	background-color: #FFD300;
+}
+
+.dark-text {
+	color: #333 !important;
+}
+
+h1 {
+	display: inline-block;
+}
