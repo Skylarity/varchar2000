@@ -13,10 +13,7 @@ export class AppComponent {
 		let newlines: string[] = text.value.match(/(\r\n|\n|\r)/g);
         if (newlines != null) {
             this.currentCharsUsed = text.value.length + newlines.length;
-			// console.log(newlines);
-			// console.log("Newlines: " + newlines.length + " Characters: " + text.value.length + " Current Used: " + this.currentCharsUsed);
         } else {
-			// console.log("Newlines != null");
             this.currentCharsUsed = text.value.length;
 		}
 
@@ -37,9 +34,6 @@ export class AppComponent {
 		textarea.style.color = "";
 	}
 
-	/**
-	 * Stolen shamelessly from Rochelle
-	 **/
 	private react(): void {
 		// Grab the elements for our conveniance
 		var textarea = document.getElementById("varchar2000");
@@ -50,65 +44,65 @@ export class AppComponent {
 		let colorChance: number = 0;
 		let cornChance: number = 0;
 
-		if (this.currentCharsUsed > 50) {
+		if (this.currentCharsUsed >= 50) {
+			// TODO
+		}
+		if (this.currentCharsUsed >= 100) {
+			view.style.fontFamily = "\'Short Stack\'";
+		}
+		if (this.currentCharsUsed >= 200) {
+			// TODO
+		}
+		if (this.currentCharsUsed >= 300) {
 			colorChance = 10;
 		}
-		if (this.currentCharsUsed > 100) {
+		if (this.currentCharsUsed >= 400) {
 			colorChance = 25;
 		}
-		if (this.currentCharsUsed > 200) {
-			colorChance = 50;
-		}
-		if (this.currentCharsUsed > 300) {
-			colorChance = 75;
-		}
-		if (this.currentCharsUsed > 400) {
-			colorChance = 100;
-		}
-		if (this.currentCharsUsed > 500) {
+		if (this.currentCharsUsed >= 500) {
 			textarea.className += " " + "animated infinite pulse";
 			textarea.style.animationDuration = "1s";
 		}
-		if (this.currentCharsUsed > 600) {
+		if (this.currentCharsUsed >= 600) {
+			colorChance = 50;
+		}
+		if (this.currentCharsUsed >= 700) {
+			colorChance = 75;
+		}
+		if (this.currentCharsUsed >= 800) {
+			colorChance = 100;
+		}
+		if (this.currentCharsUsed >= 900) {
+			// TODO
+		}
+		if (this.currentCharsUsed >= 1000) {
+			textarea.className += " " + "jello";
+		}
+		if (this.currentCharsUsed >= 1100) {
 			textarea.style.animationDuration = "0.9s";
 		}
-		if (this.currentCharsUsed > 700) {
-			textarea.style.animationDuration = "0.8s";
+		if (this.currentCharsUsed >= 1200) {
+			textarea.style.animationDuration = "0.7s";
 		}
-		if (this.currentCharsUsed > 800) {
-			textarea.style.animationDuration = "0.6s";
+		if (this.currentCharsUsed >= 1300) {
+			textarea.style.animationDuration = "0.5s";
 		}
-		if (this.currentCharsUsed > 900) {
-			textarea.style.animationDuration = "0.4s";
+		if (this.currentCharsUsed >= 1400) {
+			textarea.style.animationDuration = "0.3s";
 		}
-		if (this.currentCharsUsed > 1000) {
+		if (this.currentCharsUsed >= 1500) {
 			textarea.style.animationDuration = "0.1s";
 		}
-		if (this.currentCharsUsed > 1100) {
+		if (this.currentCharsUsed >= 1600) {
 			// TODO
 		}
-		if (this.currentCharsUsed > 1200) {
-			// TODO
-		}
-		if (this.currentCharsUsed > 1300) {
-			// TODO
-		}
-		if (this.currentCharsUsed > 1400) {
-			// TODO
-		}
-		if (this.currentCharsUsed > 1500) {
-			// TODO
-		}
-		if (this.currentCharsUsed > 1600) {
-			// TODO
-		}
-		if (this.currentCharsUsed > 1700) {
+		if (this.currentCharsUsed >= 1700) {
 			cornChance = 5;
 		}
-		if (this.currentCharsUsed > 1800) {
+		if (this.currentCharsUsed >= 1800) {
 			cornChance = 10;
 		}
-		if (this.currentCharsUsed > 1900) {
+		if (this.currentCharsUsed >= 1900) {
 			cornChance = 15;
 			view.style.backgroundImage = "url(app/img/bush.jpg)";
 			view.style.backgroundSize = "cover";
@@ -117,13 +111,18 @@ export class AppComponent {
 			open("https://www.donaldjtrump.com/");
 		}
 
-		// Apply a background color from the array of colors
+		/**
+		 * Apply a background color from the array of colors
+		 * (Stolen shamelessly from Rochelle)
+		 **/
 		if ((Math.random() * 100) < colorChance) {
 			textarea.style.backgroundColor=colors[Math.floor(Math.random() * colors.length)];
 			textarea.style.color="white";
 		}
 
-		// COOOOOOOOOOOOORN
+		/**
+		 * COOOOOOOOOOOOORN
+		 **/
 		if ((Math.random() * 100) < cornChance) {
 			textarea.onkeyup = cornify_add();
 		} else {
