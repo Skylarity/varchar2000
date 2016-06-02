@@ -119,14 +119,5 @@ export class AppComponent {
 			textarea.style.backgroundColor=colors[Math.floor(Math.random() * colors.length)];
 			textarea.style.color="white";
 		}
-
-		/**
-		 * COOOOOOOOOOOOORN
-		 **/
-		if ((Math.random() * 100) < cornChance) {
-			textarea.onkeyup = cornify_add();
-		} else {
-			textarea.onkeyup = null;
-		}
 	}
 }
